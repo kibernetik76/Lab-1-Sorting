@@ -1,0 +1,146 @@
+\doxysection{Employee Struct Reference}
+\hypertarget{struct_employee}{}\label{struct_employee}\index{Employee@{Employee}}
+
+
+Структура, описывающая одного служащего.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{struct_employee_a16958590a4e959f5988affe91e49e374}{operator$<$}} (const \doxymbox{\hyperlink{struct_employee}{Employee}} \&other) const
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора "{}меньше"{} (\texorpdfstring{$<$}{<}). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{struct_employee_ae74de5c4cf1daf2e77423e8998c73153}{operator$>$}} (const \doxymbox{\hyperlink{struct_employee}{Employee}} \&other) const
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора "{}больше"{} (\texorpdfstring{$>$}{>}). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{struct_employee_ab0b97a5ee35f0c4562a7e8bc7383035a}{operator$<$=}} (const \doxymbox{\hyperlink{struct_employee}{Employee}} \&other) const
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора "{}меньше или равно"{} (\texorpdfstring{$<$}{<}=). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{struct_employee_aa70438a1ece95d6ca3d8ebcc1b1b4f2e}{operator$>$=}} (const \doxymbox{\hyperlink{struct_employee}{Employee}} \&other) const
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора "{}больше или равно"{} (\texorpdfstring{$>$}{>}=). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group___data_structure_ga16958590a4e959f5988affe91e49e374}{operator$<$}} (const \doxymbox{\hyperlink{struct_employee}{Employee}} \&other) const
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора "{}меньше"{} (\texorpdfstring{$<$}{<}). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group___data_structure_gae74de5c4cf1daf2e77423e8998c73153}{operator$>$}} (const \doxymbox{\hyperlink{struct_employee}{Employee}} \&other) const
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора "{}больше"{} (\texorpdfstring{$>$}{>}). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group___data_structure_gab0b97a5ee35f0c4562a7e8bc7383035a}{operator$<$=}} (const \doxymbox{\hyperlink{struct_employee}{Employee}} \&other) const
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора "{}меньше или равно"{} (\texorpdfstring{$<$}{<}=). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group___data_structure_gaa70438a1ece95d6ca3d8ebcc1b1b4f2e}{operator$>$=}} (const \doxymbox{\hyperlink{struct_employee}{Employee}} \&other) const
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора "{}больше или равно"{} (\texorpdfstring{$>$}{>}=). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{struct_employee_a036e1256a10b6d2748780b6ad025aeda}{full\+Name}}
+\begin{DoxyCompactList}\small\item\em ФИО сотрудника \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{struct_employee_aff8eacef4f7f05249658ed06555054db}{position}}
+\begin{DoxyCompactList}\small\item\em Должность \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{struct_employee_ac430c78ff0f13b83ab065f69907ec143}{department}}
+\begin{DoxyCompactList}\small\item\em Подразделение \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{struct_employee_a10872e0e01c0412d8b5efafc36bb8226}{salary}}
+\begin{DoxyCompactList}\small\item\em Зарплата \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Структура, описывающая одного служащего. 
+
+Структура, описывающая одного служащего бухгалтерии. 
+
+\label{struct_employee_doc-func-members}
+\Hypertarget{struct_employee_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_employee_a16958590a4e959f5988affe91e49e374}\index{Employee@{Employee}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily \label{struct_employee_a16958590a4e959f5988affe91e49e374} 
+bool Employee::\+operator$<$ (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_employee}{Employee}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Перегрузка оператора "{}меньше"{} (\texorpdfstring{$<$}{<}). 
+
+Сравнивает двух сотрудников по приоритетам:\+ Подразделение -\/\texorpdfstring{$>$}{>} ФИО -\/\texorpdfstring{$>$}{>} Зарплата. 
+\begin{DoxyParams}{Parameters}
+{\em other} & Другой сотрудник, с которым мы сравниваем текущего. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если текущий сотрудник "{}меньше"{} (должен стоять раньше). 
+\end{DoxyReturn}
+\Hypertarget{struct_employee_ab0b97a5ee35f0c4562a7e8bc7383035a}\index{Employee@{Employee}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily \label{struct_employee_ab0b97a5ee35f0c4562a7e8bc7383035a} 
+bool Employee::\+operator$<$= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_employee}{Employee}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Перегрузка оператора "{}меньше или равно"{} (\texorpdfstring{$<$}{<}=). 
+
+\Hypertarget{struct_employee_ae74de5c4cf1daf2e77423e8998c73153}\index{Employee@{Employee}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily \label{struct_employee_ae74de5c4cf1daf2e77423e8998c73153} 
+bool Employee::\+operator$>$ (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_employee}{Employee}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Перегрузка оператора "{}больше"{} (\texorpdfstring{$>$}{>}). 
+
+Строится на основе уже написанного оператора \texorpdfstring{$<$}{<}. \Hypertarget{struct_employee_aa70438a1ece95d6ca3d8ebcc1b1b4f2e}\index{Employee@{Employee}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily \label{struct_employee_aa70438a1ece95d6ca3d8ebcc1b1b4f2e} 
+bool Employee::\+operator$>$= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_employee}{Employee}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Перегрузка оператора "{}больше или равно"{} (\texorpdfstring{$>$}{>}=). 
+
+
+
+\label{struct_employee_doc-variable-members}
+\Hypertarget{struct_employee_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_employee_ac430c78ff0f13b83ab065f69907ec143}\index{Employee@{Employee}!department@{department}}
+\index{department@{department}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{department}{department}}
+{\footnotesize\ttfamily \label{struct_employee_ac430c78ff0f13b83ab065f69907ec143} 
+std::\+string Employee::\+department}
+
+
+
+Подразделение 
+
+\Hypertarget{struct_employee_a036e1256a10b6d2748780b6ad025aeda}\index{Employee@{Employee}!fullName@{fullName}}
+\index{fullName@{fullName}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{fullName}{fullName}}
+{\footnotesize\ttfamily \label{struct_employee_a036e1256a10b6d2748780b6ad025aeda} 
+std::\+string Employee::\+full\+Name}
+
+
+
+ФИО сотрудника 
+
+\Hypertarget{struct_employee_aff8eacef4f7f05249658ed06555054db}\index{Employee@{Employee}!position@{position}}
+\index{position@{position}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \label{struct_employee_aff8eacef4f7f05249658ed06555054db} 
+std::\+string Employee::\+position}
+
+
+
+Должность 
+
+\Hypertarget{struct_employee_a10872e0e01c0412d8b5efafc36bb8226}\index{Employee@{Employee}!salary@{salary}}
+\index{salary@{salary}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{salary}{salary}}
+{\footnotesize\ttfamily \label{struct_employee_a10872e0e01c0412d8b5efafc36bb8226} 
+int Employee::\+salary}
+
+
+
+Зарплата 
+
+
+
+The documentation for this struct was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp}{Var\+\_\+3 — копия.\+cpp}}\item 
+\doxymbox{\hyperlink{_var__3_8cpp}{Var\+\_\+3.\+cpp}}\end{DoxyCompactItemize}

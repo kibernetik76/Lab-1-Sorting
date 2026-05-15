@@ -1,0 +1,88 @@
+\doxysection{Структура данных }
+\hypertarget{group___data_structure}{}\label{group___data_structure}\index{Структура данных@{Структура данных}}
+
+
+Описание сущности сотрудника и правила их сравнения.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_employee}{Employee}}
+\begin{DoxyCompactList}\small\item\em Структура, описывающая одного служащего. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{group___data_structure_ga16958590a4e959f5988affe91e49e374}{Employee::\+operator$<$}} (const \doxymbox{\hyperlink{struct_employee}{Employee}} \&other) const
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора "{}меньше"{} (\texorpdfstring{$<$}{<}). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group___data_structure_gae74de5c4cf1daf2e77423e8998c73153}{Employee::\+operator$>$}} (const \doxymbox{\hyperlink{struct_employee}{Employee}} \&other) const
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора "{}больше"{} (\texorpdfstring{$>$}{>}). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group___data_structure_gab0b97a5ee35f0c4562a7e8bc7383035a}{Employee::\+operator$<$=}} (const \doxymbox{\hyperlink{struct_employee}{Employee}} \&other) const
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора "{}меньше или равно"{} (\texorpdfstring{$<$}{<}=). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group___data_structure_gaa70438a1ece95d6ca3d8ebcc1b1b4f2e}{Employee::\+operator$>$=}} (const \doxymbox{\hyperlink{struct_employee}{Employee}} \&other) const
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора "{}больше или равно"{} (\texorpdfstring{$>$}{>}=). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Описание сущности сотрудника и правила их сравнения. 
+
+
+
+\label{group___data_structure_doc-func-members}
+\Hypertarget{group___data_structure_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group___data_structure_ga16958590a4e959f5988affe91e49e374}\index{Структура данных@{Структура данных}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Структура данных@{Структура данных}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily \label{group___data_structure_ga16958590a4e959f5988affe91e49e374} 
+bool Employee::\+operator$<$ (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_employee}{Employee}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Перегрузка оператора "{}меньше"{} (\texorpdfstring{$<$}{<}). 
+
+Сравнивает двух сотрудников по приоритетам:\+ Подразделение -\/\texorpdfstring{$>$}{>} ФИО -\/\texorpdfstring{$>$}{>} Зарплата. 
+\begin{DoxyParams}{Parameters}
+{\em other} & Другой сотрудник, с которым мы сравниваем текущего. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если текущий сотрудник "{}меньше"{} (должен стоять раньше). 
+\end{DoxyReturn}
+\Hypertarget{group___data_structure_gab0b97a5ee35f0c4562a7e8bc7383035a}\index{Структура данных@{Структура данных}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Структура данных@{Структура данных}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily \label{group___data_structure_gab0b97a5ee35f0c4562a7e8bc7383035a} 
+bool Employee::\+operator$<$= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_employee}{Employee}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Перегрузка оператора "{}меньше или равно"{} (\texorpdfstring{$<$}{<}=). 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}\Hypertarget{group___data_structure_gae74de5c4cf1daf2e77423e8998c73153}\index{Структура данных@{Структура данных}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Структура данных@{Структура данных}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily \label{group___data_structure_gae74de5c4cf1daf2e77423e8998c73153} 
+bool Employee::\+operator$>$ (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_employee}{Employee}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Перегрузка оператора "{}больше"{} (\texorpdfstring{$>$}{>}). 
+
+\Hypertarget{group___data_structure_gaa70438a1ece95d6ca3d8ebcc1b1b4f2e}\index{Структура данных@{Структура данных}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Структура данных@{Структура данных}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily \label{group___data_structure_gaa70438a1ece95d6ca3d8ebcc1b1b4f2e} 
+bool Employee::\+operator$>$= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_employee}{Employee}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Перегрузка оператора "{}больше или равно"{} (\texorpdfstring{$>$}{>}=). 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}

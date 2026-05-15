@@ -1,0 +1,122 @@
+\doxysection{Var\+\_\+3 — копия.\+cpp File Reference}
+\hypertarget{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp}{}\label{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp}\index{Var\_3 — копия.cpp@{Var\_3 — копия.cpp}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$sstream$>$}\newline
+{\ttfamily \+\#include $<$chrono$>$}\newline
+{\ttfamily \+\#include $<$algorithm$>$}\newline
+{\ttfamily \+\#include $<$random$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_employee}{Employee}}
+\begin{DoxyCompactList}\small\item\em Структура, описывающая одного служащего. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a68baaef84c1bf112c8235cf9a6fd99f9}{insertion\+Sort}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr)
+\begin{DoxyCompactList}\small\item\em Сортировка простыми вставками. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a136a65c05ecc50d4cc7de06d5c8d08bf}{shaker\+Sort}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr)
+\begin{DoxyCompactList}\small\item\em Шейкер-\/сортировка (двунаправленный пузырек). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a8d2f8ac3d9def1c1f145a6494a186882}{merge}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr, int left, int mid, int right)
+\begin{DoxyCompactList}\small\item\em Вспомогательная функция для сортировки слиянием. Сливает две части вместе. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a4e0d2a8eaad47f08ea119780c540ac30}{merge\+Sort}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr, int left, int right)
+\begin{DoxyCompactList}\small\item\em Основная рекурсивная функция сортировки слиянием. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \doxymbox{\hyperlink{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a83d575586d84a538d53b423ed460d3da}{read\+CSV}} (const std::\+string \&filename)
+\item 
+void \doxymbox{\hyperlink{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_af2a966cbb808694497f55c91e34f89b3}{write\+CSV}} (const std::\+string \&filename, const std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&data)
+\item 
+void \doxymbox{\hyperlink{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a19a615ebb11a8427610d7a1d927d6cfb}{generate\+CSV}} (const std::\+string \&filename, int count)
+\item 
+int \doxymbox{\hyperlink{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\label{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_doc-func-members}
+\Hypertarget{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a19a615ebb11a8427610d7a1d927d6cfb}\index{Var\_3 — копия.cpp@{Var\_3 — копия.cpp}!generateCSV@{generateCSV}}
+\index{generateCSV@{generateCSV}!Var\_3 — копия.cpp@{Var\_3 — копия.cpp}}
+\doxysubsubsection{\texorpdfstring{generateCSV()}{generateCSV()}}
+{\footnotesize\ttfamily \label{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a19a615ebb11a8427610d7a1d927d6cfb} 
+void generate\+CSV (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{, }\item[{int}]{count}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a68baaef84c1bf112c8235cf9a6fd99f9}\index{Var\_3 — копия.cpp@{Var\_3 — копия.cpp}!insertionSort@{insertionSort}}
+\index{insertionSort@{insertionSort}!Var\_3 — копия.cpp@{Var\_3 — копия.cpp}}
+\doxysubsubsection{\texorpdfstring{insertionSort()}{insertionSort()}}
+{\footnotesize\ttfamily \label{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a68baaef84c1bf112c8235cf9a6fd99f9} 
+void insertion\+Sort (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+Сортировка простыми вставками. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Ссылка на массив сотрудников. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{Var\_3 — копия.cpp@{Var\_3 — копия.cpp}!main@{main}}
+\index{main@{main}!Var\_3 — копия.cpp@{Var\_3 — копия.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a8d2f8ac3d9def1c1f145a6494a186882}\index{Var\_3 — копия.cpp@{Var\_3 — копия.cpp}!merge@{merge}}
+\index{merge@{merge}!Var\_3 — копия.cpp@{Var\_3 — копия.cpp}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily \label{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a8d2f8ac3d9def1c1f145a6494a186882} 
+void merge (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&}]{arr}{, }\item[{int}]{left}{, }\item[{int}]{mid}{, }\item[{int}]{right}{}\end{DoxyParamCaption})}
+
+
+
+Вспомогательная функция для сортировки слиянием. Сливает две части вместе. 
+
+\Hypertarget{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a4e0d2a8eaad47f08ea119780c540ac30}\index{Var\_3 — копия.cpp@{Var\_3 — копия.cpp}!mergeSort@{mergeSort}}
+\index{mergeSort@{mergeSort}!Var\_3 — копия.cpp@{Var\_3 — копия.cpp}}
+\doxysubsubsection{\texorpdfstring{mergeSort()}{mergeSort()}}
+{\footnotesize\ttfamily \label{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a4e0d2a8eaad47f08ea119780c540ac30} 
+void merge\+Sort (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&}]{arr}{, }\item[{int}]{left}{, }\item[{int}]{right}{}\end{DoxyParamCaption})}
+
+
+
+Основная рекурсивная функция сортировки слиянием. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Массив сотрудников. \\
+\hline
+{\em left} & Индекс начала. \\
+\hline
+{\em right} & Индекс конца. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a83d575586d84a538d53b423ed460d3da}\index{Var\_3 — копия.cpp@{Var\_3 — копия.cpp}!readCSV@{readCSV}}
+\index{readCSV@{readCSV}!Var\_3 — копия.cpp@{Var\_3 — копия.cpp}}
+\doxysubsubsection{\texorpdfstring{readCSV()}{readCSV()}}
+{\footnotesize\ttfamily \label{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a83d575586d84a538d53b423ed460d3da} 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ read\+CSV (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a136a65c05ecc50d4cc7de06d5c8d08bf}\index{Var\_3 — копия.cpp@{Var\_3 — копия.cpp}!shakerSort@{shakerSort}}
+\index{shakerSort@{shakerSort}!Var\_3 — копия.cpp@{Var\_3 — копия.cpp}}
+\doxysubsubsection{\texorpdfstring{shakerSort()}{shakerSort()}}
+{\footnotesize\ttfamily \label{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_a136a65c05ecc50d4cc7de06d5c8d08bf} 
+void shaker\+Sort (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+Шейкер-\/сортировка (двунаправленный пузырек). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Ссылка на массив сотрудников. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_af2a966cbb808694497f55c91e34f89b3}\index{Var\_3 — копия.cpp@{Var\_3 — копия.cpp}!writeCSV@{writeCSV}}
+\index{writeCSV@{writeCSV}!Var\_3 — копия.cpp@{Var\_3 — копия.cpp}}
+\doxysubsubsection{\texorpdfstring{writeCSV()}{writeCSV()}}
+{\footnotesize\ttfamily \label{_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp_af2a966cbb808694497f55c91e34f89b3} 
+void write\+CSV (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{, }\item[{const std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&}]{data}{}\end{DoxyParamCaption})}
+

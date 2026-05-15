@@ -1,0 +1,87 @@
+\doxysection{Методы сортировки }
+\hypertarget{group___sorting_methods}{}\label{group___sorting_methods}\index{Методы сортировки@{Методы сортировки}}
+
+
+Реализации различных алгоритмов сортировки массива.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{group___sorting_methods_ga68baaef84c1bf112c8235cf9a6fd99f9}{insertion\+Sort}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr)
+\begin{DoxyCompactList}\small\item\em Сортировка простыми вставками. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group___sorting_methods_ga136a65c05ecc50d4cc7de06d5c8d08bf}{shaker\+Sort}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr)
+\begin{DoxyCompactList}\small\item\em Шейкер-\/сортировка (двунаправленный пузырек). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group___sorting_methods_ga8d2f8ac3d9def1c1f145a6494a186882}{merge}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr, int left, int mid, int right)
+\begin{DoxyCompactList}\small\item\em Вспомогательная функция для сортировки слиянием. Сливает две части вместе. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group___sorting_methods_ga4e0d2a8eaad47f08ea119780c540ac30}{merge\+Sort}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr, int left, int right)
+\begin{DoxyCompactList}\small\item\em Основная рекурсивная функция сортировки слиянием. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Реализации различных алгоритмов сортировки массива. 
+
+
+
+\label{group___sorting_methods_doc-func-members}
+\Hypertarget{group___sorting_methods_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group___sorting_methods_ga68baaef84c1bf112c8235cf9a6fd99f9}\index{Методы сортировки@{Методы сортировки}!insertionSort@{insertionSort}}
+\index{insertionSort@{insertionSort}!Методы сортировки@{Методы сортировки}}
+\doxysubsubsection{\texorpdfstring{insertionSort()}{insertionSort()}}
+{\footnotesize\ttfamily \label{group___sorting_methods_ga68baaef84c1bf112c8235cf9a6fd99f9} 
+void insertion\+Sort (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+Сортировка простыми вставками. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Ссылка на массив сотрудников. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group___sorting_methods_ga8d2f8ac3d9def1c1f145a6494a186882}\index{Методы сортировки@{Методы сортировки}!merge@{merge}}
+\index{merge@{merge}!Методы сортировки@{Методы сортировки}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily \label{group___sorting_methods_ga8d2f8ac3d9def1c1f145a6494a186882} 
+void merge (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&}]{arr}{, }\item[{int}]{left}{, }\item[{int}]{mid}{, }\item[{int}]{right}{}\end{DoxyParamCaption})}
+
+
+
+Вспомогательная функция для сортировки слиянием. Сливает две части вместе. 
+
+\Hypertarget{group___sorting_methods_ga4e0d2a8eaad47f08ea119780c540ac30}\index{Методы сортировки@{Методы сортировки}!mergeSort@{mergeSort}}
+\index{mergeSort@{mergeSort}!Методы сортировки@{Методы сортировки}}
+\doxysubsubsection{\texorpdfstring{mergeSort()}{mergeSort()}}
+{\footnotesize\ttfamily \label{group___sorting_methods_ga4e0d2a8eaad47f08ea119780c540ac30} 
+void merge\+Sort (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&}]{arr}{, }\item[{int}]{left}{, }\item[{int}]{right}{}\end{DoxyParamCaption})}
+
+
+
+Основная рекурсивная функция сортировки слиянием. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Массив сотрудников. \\
+\hline
+{\em left} & Индекс начала. \\
+\hline
+{\em right} & Индекс конца. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group___sorting_methods_ga136a65c05ecc50d4cc7de06d5c8d08bf}\index{Методы сортировки@{Методы сортировки}!shakerSort@{shakerSort}}
+\index{shakerSort@{shakerSort}!Методы сортировки@{Методы сортировки}}
+\doxysubsubsection{\texorpdfstring{shakerSort()}{shakerSort()}}
+{\footnotesize\ttfamily \label{group___sorting_methods_ga136a65c05ecc50d4cc7de06d5c8d08bf} 
+void shaker\+Sort (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+Шейкер-\/сортировка (двунаправленный пузырек). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Ссылка на массив сотрудников. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,34 @@
+\doxysection{Var\+\_\+3.\+cpp File Reference}
+\hypertarget{_var__3_8cpp}{}\label{_var__3_8cpp}\index{Var\_3.cpp@{Var\_3.cpp}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$sstream$>$}\newline
+{\ttfamily \+\#include $<$chrono$>$}\newline
+{\ttfamily \+\#include $<$algorithm$>$}\newline
+{\ttfamily \+\#include $<$random$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_employee}{Employee}}
+\begin{DoxyCompactList}\small\item\em Структура, описывающая одного служащего. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{group___sorting_methods_ga68baaef84c1bf112c8235cf9a6fd99f9}{insertion\+Sort}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr)
+\begin{DoxyCompactList}\small\item\em Сортировка простыми вставками. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group___sorting_methods_ga136a65c05ecc50d4cc7de06d5c8d08bf}{shaker\+Sort}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr)
+\begin{DoxyCompactList}\small\item\em Шейкер-\/сортировка (двунаправленный пузырек). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group___sorting_methods_ga8d2f8ac3d9def1c1f145a6494a186882}{merge}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr, int left, int mid, int right)
+\begin{DoxyCompactList}\small\item\em Вспомогательная функция для сортировки слиянием. Сливает две части вместе. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group___sorting_methods_ga4e0d2a8eaad47f08ea119780c540ac30}{merge\+Sort}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr, int left, int right)
+\begin{DoxyCompactList}\small\item\em Основная рекурсивная функция сортировки слиянием. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \doxymbox{\hyperlink{group___helper_functions_ga83d575586d84a538d53b423ed460d3da}{read\+CSV}} (const std::\+string \&filename)
+\begin{DoxyCompactList}\small\item\em Чтение данных из CSV файла. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group___helper_functions_gaf2a966cbb808694497f55c91e34f89b3}{write\+CSV}} (const std::\+string \&filename, const std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Запись отсортированных данных в CSV файл. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group___helper_functions_ga19a615ebb11a8427610d7a1d927d6cfb}{generate\+CSV}} (const std::\+string \&filename, int count)
+\begin{DoxyCompactList}\small\item\em Генерация CSV файла со случайными данными. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group___main_function_gae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Точка входа. \end{DoxyCompactList}\end{DoxyCompactItemize}
