@@ -1,7 +1,7 @@
 var topics =
 [
-    [ "Структура данных", "group___data_structure.html", "group___data_structure" ],
-    [ "Методы сортировки", "group___sorting_methods.html", "group___sorting_methods" ],
-    [ "Вспомогательные функции", "group___helper_functions.html", "group___helper_functions" ],
-    [ "Главная функция", "group___main_function.html", "group___main_function" ]
+    [ "Структура данных работника", "group___struct.html", "group___struct" ],
+    [ "Сортировка", "group___sorting.html", "group___sorting" ],
+    [ "Доп функции", "group___help_func.html", "group___help_func" ],
+    [ "Главная функция", "group___main_func.html", "group___main_func" ]
 ];

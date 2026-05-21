@@ -5,30 +5,38 @@
 {\ttfamily \+\#include $<$string$>$}\newline
 {\ttfamily \+\#include $<$fstream$>$}\newline
 {\ttfamily \+\#include $<$sstream$>$}\newline
-{\ttfamily \+\#include $<$chrono$>$}\newline
 {\ttfamily \+\#include $<$algorithm$>$}\newline
-{\ttfamily \+\#include $<$random$>$}\newline
+{\ttfamily \+\#include $<$ctime$>$}\newline
+{\ttfamily \+\#include $<$cstdlib$>$}\newline
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 struct \doxymbox{\hyperlink{struct_employee}{Employee}}
-\begin{DoxyCompactList}\small\item\em Структура, описывающая одного служащего. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Структура, которая описывает одного работника \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \doxymbox{\hyperlink{group___sorting_methods_ga68baaef84c1bf112c8235cf9a6fd99f9}{insertion\+Sort}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr)
+bool \doxymbox{\hyperlink{group___struct_ga7aa875d953ba4d410208135fa6912443}{operator$<$}} (const \doxymbox{\hyperlink{struct_employee}{Employee}} \&a, const \doxymbox{\hyperlink{struct_employee}{Employee}} \&b)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора меньше "{}$<$"{}. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group___struct_ga480fda4574e4c14a90c949fb7e3e009e}{operator$>$}} (const \doxymbox{\hyperlink{struct_employee}{Employee}} \&a, const \doxymbox{\hyperlink{struct_employee}{Employee}} \&b)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора "{}больше"{} (\texorpdfstring{$>$}{>}). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group___struct_ga1c4fde2074760b91f031f644acc252fd}{operator$<$=}} (const \doxymbox{\hyperlink{struct_employee}{Employee}} \&a, const \doxymbox{\hyperlink{struct_employee}{Employee}} \&b)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора "{}меньше или равно"{} (\texorpdfstring{$<$}{<}=). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group___struct_ga1c75ce927a92c7b52412eff908c403eb}{operator$>$=}} (const \doxymbox{\hyperlink{struct_employee}{Employee}} \&a, const \doxymbox{\hyperlink{struct_employee}{Employee}} \&b)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора "{}больше или равно"{} (\texorpdfstring{$>$}{>}=). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group___sorting_ga7ff0967542b8cd61da9ad5aba6e17f90}{Simple\+Sort}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr)
 \begin{DoxyCompactList}\small\item\em Сортировка простыми вставками. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{group___sorting_methods_ga136a65c05ecc50d4cc7de06d5c8d08bf}{shaker\+Sort}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr)
+void \doxymbox{\hyperlink{group___sorting_ga136a65c05ecc50d4cc7de06d5c8d08bf}{shaker\+Sort}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr)
 \begin{DoxyCompactList}\small\item\em Шейкер-\/сортировка (двунаправленный пузырек). \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{group___sorting_methods_ga8d2f8ac3d9def1c1f145a6494a186882}{merge}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr, int left, int mid, int right)
-\begin{DoxyCompactList}\small\item\em Вспомогательная функция для сортировки слиянием. Сливает две части вместе. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{group___sorting_methods_ga4e0d2a8eaad47f08ea119780c540ac30}{merge\+Sort}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr, int left, int right)
+void \doxymbox{\hyperlink{group___sorting_ga64946939e26cb6fbd55db8c804d1feab}{merge\+Sort1}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr, int left, int mid, int right)
+\begin{DoxyCompactList}\small\item\em Вспомогательная функция. Сливает две отсортированные части вместе. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group___sorting_ga4fe0dd76c3bacb65debfe35e30b6fdfd}{merge\+Sort2}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr, int left, int right)
 \begin{DoxyCompactList}\small\item\em Основная рекурсивная функция сортировки слиянием. \end{DoxyCompactList}\item 
-std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \doxymbox{\hyperlink{group___helper_functions_ga83d575586d84a538d53b423ed460d3da}{read\+CSV}} (const std::\+string \&filename)
+std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \doxymbox{\hyperlink{group___help_func_ga83d575586d84a538d53b423ed460d3da}{read\+CSV}} (const std::\+string \&filename)
 \begin{DoxyCompactList}\small\item\em Чтение данных из CSV файла. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{group___helper_functions_gaf2a966cbb808694497f55c91e34f89b3}{write\+CSV}} (const std::\+string \&filename, const std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&data)
+void \doxymbox{\hyperlink{group___help_func_gaf2a966cbb808694497f55c91e34f89b3}{write\+CSV}} (const std::\+string \&filename, const std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&data)
 \begin{DoxyCompactList}\small\item\em Запись отсортированных данных в CSV файл. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{group___helper_functions_ga19a615ebb11a8427610d7a1d927d6cfb}{generate\+CSV}} (const std::\+string \&filename, int count)
+void \doxymbox{\hyperlink{group___help_func_ga19a615ebb11a8427610d7a1d927d6cfb}{generate\+CSV}} (const std::\+string \&filename, int count)
 \begin{DoxyCompactList}\small\item\em Генерация CSV файла со случайными данными. \end{DoxyCompactList}\item 
-int \doxymbox{\hyperlink{group___main_function_gae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+int \doxymbox{\hyperlink{group___main_func_gae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 \begin{DoxyCompactList}\small\item\em Точка входа. \end{DoxyCompactList}\end{DoxyCompactItemize}

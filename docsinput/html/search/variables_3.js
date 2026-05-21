@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['marker_0',['marker',['../namespaceplot.html#a6f4c46ae4e5d361b778c402ec6a4a993',1,'plot']]]
+  ['label_0',['label',['../namespaceplot.html#ab833ccc4e4fb7e634ddb35e4eb25c59d',1,'plot']]]
 ];

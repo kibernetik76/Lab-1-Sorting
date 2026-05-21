@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['main_0',['main',['../_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;Var_3 — копия.cpp'],['../group___main_function.html#gae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;Var_3.cpp']]],
-  ['merge_1',['merge',['../_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp.html#a8d2f8ac3d9def1c1f145a6494a186882',1,'merge(std::vector&lt; Employee &gt; &amp;arr, int left, int mid, int right):&#160;Var_3 — копия.cpp'],['../group___sorting_methods.html#ga8d2f8ac3d9def1c1f145a6494a186882',1,'merge(std::vector&lt; Employee &gt; &amp;arr, int left, int mid, int right):&#160;Var_3.cpp']]],
-  ['mergesort_2',['mergeSort',['../_var__3_01_xE2_x80_x94_01_xD0_xBA_xD0_xBE_xD0_xBF_xD0_xB8_xD1_x8F_8cpp.html#a4e0d2a8eaad47f08ea119780c540ac30',1,'mergeSort(std::vector&lt; Employee &gt; &amp;arr, int left, int right):&#160;Var_3 — копия.cpp'],['../group___sorting_methods.html#ga4e0d2a8eaad47f08ea119780c540ac30',1,'mergeSort(std::vector&lt; Employee &gt; &amp;arr, int left, int right):&#160;Var_3.cpp']]]
+  ['operator_3c_0',['operator&lt;',['../group___struct.html#ga7aa875d953ba4d410208135fa6912443',1,'Var_3.cpp']]],
+  ['operator_3c_3d_1',['operator&lt;=',['../group___struct.html#ga1c4fde2074760b91f031f644acc252fd',1,'Var_3.cpp']]],
+  ['operator_3e_2',['operator&gt;',['../group___struct.html#ga480fda4574e4c14a90c949fb7e3e009e',1,'Var_3.cpp']]],
+  ['operator_3e_3d_3',['operator&gt;=',['../group___struct.html#ga1c75ce927a92c7b52412eff908c403eb',1,'Var_3.cpp']]]
 ];

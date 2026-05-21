@@ -1,0 +1,78 @@
+\doxysection{Сортировка }
+\hypertarget{group___sorting}{}\label{group___sorting}\index{Сортировка@{Сортировка}}
+
+
+Реализация вариантов сортировки:\+ сортировка простыми вставками, шейкер-\/сортировка, сортировка слиянием.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{group___sorting_ga7ff0967542b8cd61da9ad5aba6e17f90}{Simple\+Sort}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr)
+\begin{DoxyCompactList}\small\item\em Сортировка простыми вставками. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group___sorting_ga136a65c05ecc50d4cc7de06d5c8d08bf}{shaker\+Sort}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr)
+\begin{DoxyCompactList}\small\item\em Шейкер-\/сортировка (двунаправленный пузырек). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group___sorting_ga64946939e26cb6fbd55db8c804d1feab}{merge\+Sort1}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr, int left, int mid, int right)
+\begin{DoxyCompactList}\small\item\em Вспомогательная функция. Сливает две отсортированные части вместе. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group___sorting_ga4fe0dd76c3bacb65debfe35e30b6fdfd}{merge\+Sort2}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&arr, int left, int right)
+\begin{DoxyCompactList}\small\item\em Основная рекурсивная функция сортировки слиянием. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Реализация вариантов сортировки:\+ сортировка простыми вставками, шейкер-\/сортировка, сортировка слиянием. 
+
+
+
+\label{group___sorting_doc-func-members}
+\Hypertarget{group___sorting_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group___sorting_ga64946939e26cb6fbd55db8c804d1feab}\index{Сортировка@{Сортировка}!mergeSort1@{mergeSort1}}
+\index{mergeSort1@{mergeSort1}!Сортировка@{Сортировка}}
+\doxysubsubsection{\texorpdfstring{mergeSort1()}{mergeSort1()}}
+{\footnotesize\ttfamily \label{group___sorting_ga64946939e26cb6fbd55db8c804d1feab} 
+void merge\+Sort1 (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&}]{arr}{, }\item[{int}]{left}{, }\item[{int}]{mid}{, }\item[{int}]{right}{}\end{DoxyParamCaption})}
+
+
+
+Вспомогательная функция. Сливает две отсортированные части вместе. 
+
+\Hypertarget{group___sorting_ga4fe0dd76c3bacb65debfe35e30b6fdfd}\index{Сортировка@{Сортировка}!mergeSort2@{mergeSort2}}
+\index{mergeSort2@{mergeSort2}!Сортировка@{Сортировка}}
+\doxysubsubsection{\texorpdfstring{mergeSort2()}{mergeSort2()}}
+{\footnotesize\ttfamily \label{group___sorting_ga4fe0dd76c3bacb65debfe35e30b6fdfd} 
+void merge\+Sort2 (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&}]{arr}{, }\item[{int}]{left}{, }\item[{int}]{right}{}\end{DoxyParamCaption})}
+
+
+
+Основная рекурсивная функция сортировки слиянием. 
+
+\Hypertarget{group___sorting_ga136a65c05ecc50d4cc7de06d5c8d08bf}\index{Сортировка@{Сортировка}!shakerSort@{shakerSort}}
+\index{shakerSort@{shakerSort}!Сортировка@{Сортировка}}
+\doxysubsubsection{\texorpdfstring{shakerSort()}{shakerSort()}}
+{\footnotesize\ttfamily \label{group___sorting_ga136a65c05ecc50d4cc7de06d5c8d08bf} 
+void shaker\+Sort (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+Шейкер-\/сортировка (двунаправленный пузырек). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Ссылка на массив сотрудников. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group___sorting_ga7ff0967542b8cd61da9ad5aba6e17f90}\index{Сортировка@{Сортировка}!SimpleSort@{SimpleSort}}
+\index{SimpleSort@{SimpleSort}!Сортировка@{Сортировка}}
+\doxysubsubsection{\texorpdfstring{SimpleSort()}{SimpleSort()}}
+{\footnotesize\ttfamily \label{group___sorting_ga7ff0967542b8cd61da9ad5aba6e17f90} 
+void Simple\+Sort (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+Сортировка простыми вставками. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Ссылка на массив сотрудников. \\
+\hline
+\end{DoxyParams}

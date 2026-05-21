@@ -1,0 +1,78 @@
+\doxysection{Доп функции }
+\hypertarget{group___help_func}{}\label{group___help_func}\index{Доп функции@{Доп функции}}
+
+
+Функции для работы с файловой системой.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \doxymbox{\hyperlink{group___help_func_ga83d575586d84a538d53b423ed460d3da}{read\+CSV}} (const std::\+string \&filename)
+\begin{DoxyCompactList}\small\item\em Чтение данных из CSV файла. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group___help_func_gaf2a966cbb808694497f55c91e34f89b3}{write\+CSV}} (const std::\+string \&filename, const std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Запись отсортированных данных в CSV файл. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group___help_func_ga19a615ebb11a8427610d7a1d927d6cfb}{generate\+CSV}} (const std::\+string \&filename, int count)
+\begin{DoxyCompactList}\small\item\em Генерация CSV файла со случайными данными. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Функции для работы с файловой системой. 
+
+
+
+\label{group___help_func_doc-func-members}
+\Hypertarget{group___help_func_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group___help_func_ga19a615ebb11a8427610d7a1d927d6cfb}\index{Доп функции@{Доп функции}!generateCSV@{generateCSV}}
+\index{generateCSV@{generateCSV}!Доп функции@{Доп функции}}
+\doxysubsubsection{\texorpdfstring{generateCSV()}{generateCSV()}}
+{\footnotesize\ttfamily \label{group___help_func_ga19a615ebb11a8427610d7a1d927d6cfb} 
+void generate\+CSV (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{, }\item[{int}]{count}{}\end{DoxyParamCaption})}
+
+
+
+Генерация CSV файла со случайными данными. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Имя создаваемого файла. \\
+\hline
+{\em count} & Количество строк для генерации. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group___help_func_ga83d575586d84a538d53b423ed460d3da}\index{Доп функции@{Доп функции}!readCSV@{readCSV}}
+\index{readCSV@{readCSV}!Доп функции@{Доп функции}}
+\doxysubsubsection{\texorpdfstring{readCSV()}{readCSV()}}
+{\footnotesize\ttfamily \label{group___help_func_ga83d575586d84a538d53b423ed460d3da} 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ read\+CSV (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Чтение данных из CSV файла. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Имя файла для чтения. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Массив загруженных сотрудников. 
+\end{DoxyReturn}
+\Hypertarget{group___help_func_gaf2a966cbb808694497f55c91e34f89b3}\index{Доп функции@{Доп функции}!writeCSV@{writeCSV}}
+\index{writeCSV@{writeCSV}!Доп функции@{Доп функции}}
+\doxysubsubsection{\texorpdfstring{writeCSV()}{writeCSV()}}
+{\footnotesize\ttfamily \label{group___help_func_gaf2a966cbb808694497f55c91e34f89b3} 
+void write\+CSV (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{, }\item[{const std::\+vector$<$ \doxymbox{\hyperlink{struct_employee}{Employee}} $>$ \&}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Запись отсортированных данных в CSV файл. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Имя файла для сохранения. \\
+\hline
+{\em data} & Массив сотрудников для записи. \\
+\hline
+\end{DoxyParams}

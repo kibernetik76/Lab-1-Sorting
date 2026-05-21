@@ -1,126 +1,166 @@
-/**
- * @file main.cpp
- * @brief Сортировка массива служащих бухгалтерии.
- * @details В программе реализованы чтение данных из CSV, три вида сортировок 
- * и замер времени их работы для графиков.
- */
 
 #include <iostream>
 #include <vector>
 #include <string>
 #include <fstream>
 #include <sstream>
-#include <chrono>
 #include <algorithm>
-#include <random>
-
+#include <ctime>   
+#include <cstdlib> 
 
 
 /**
- * @defgroup DataStructure Структура данных
- * @brief Описание сущности сотрудника и правила их сравнения.
+ * @defgroup Struct Структура данных работника
+ * @brief Стукртура сотрудника и перегрузка оператора.
+ *
+ * @defgroup Sorting Сортировка
+ * @brief Реализация вариантов сортировки: сортировка простыми вставками, шейкер-сортировка, сортировка слиянием.
+ *
+ * @defgroup HelpFunc Доп функции
+ * @brief Функции для работы с файловой системой.
+ *
+ * @defgroup MainFunc Главная функция
+ * @brief ОСновная программа.
  */
 
 /**
- * @ingroup DataStructure
- * @brief Структура, описывающая одного служащего бухгалтерии.
+ * @ingroup Struct
+ * @brief Структура, которая описывает одного работника
  */
 struct Employee {
-    std::string fullName;   ///< ФИО сотрудника
-    std::string position;   ///< Должность
-    std::string department; ///< Подразделение
-    int salary;             ///< Зарплата
-
-    /**
-     * @ingroup DataStructure
-     * @brief Перегрузка оператора "меньше" (<).
-     * @details Сравнивает двух сотрудников по приоритетам: Подразделение -> ФИО -> Зарплата.
-     * @param other Другой сотрудник, с которым мы сравниваем текущего.
-     * @return true, если текущий сотрудник "меньше" (должен стоять раньше).
-     */
-    bool operator<(const Employee& other) const {
-        if (department != other.department) {
-            return department < other.department;
-        }
-        if (fullName != other.fullName) {
-            return fullName < other.fullName;
-        }
-        return salary < other.salary;
-    }
-
-    /**
-     * @ingroup DataStructure
-     * @brief Перегрузка оператора "больше" (>).
-     */
-    bool operator>(const Employee& other) const {
-        return other < *this; 
-    }
-
-    /** * @ingroup DataStructure
-     * @brief Перегрузка оператора "меньше или равно" (<=). 
-     */
-    bool operator<=(const Employee& other) const {
-        return !(*this > other);
-    }
-
-    /** * @ingroup DataStructure
-     * @brief Перегрузка оператора "больше или равно" (>=). 
-     */
-    bool operator>=(const Employee& other) const {
-        return !(*this < other);
-    }
+    std::string name;   
+    std::string job;   
+    std::string department; 
+    int salary;             
 };
 
-
 /**
- * @defgroup SortingMethods Методы сортировки
- * @brief Реализации различных алгоритмов сортировки массива.
+ * @ingroup Struct
+ * @brief Перегрузка оператора меньше "<".
+ * @details Сравнивает двух человек по полям: подразделение, ФИО служащего, зарплата.
+ * @param a Первый сотрудник
+ * @param b Второй сотрудник
+ * @return true, если первый сотрудник меньше второго.
  */
-
-/**
- * @ingroup SortingMethods
- * @brief Сортировка простыми вставками.
- * @param arr Ссылка на массив сотрудников.
- */
-void insertionSort(std::vector<Employee>& arr) {
-    for (int i = 1; i < arr.size(); i++) {
-        Employee key = arr[i]; 
-        int j = i - 1;
-        
-        while (j >= 0 && arr[j] > key) {
-            arr[j + 1] = arr[j];
-            j--;
-        }
-        arr[j + 1] = key; 
+bool operator<(const Employee& a, const Employee& b) {
+    if (a.department != b.department) {
+        return a.department < b.department;
+    }
+    else if (a.name != b.name) {
+        return a.name < b.name;
+    }
+    else {
+        return a.salary < b.salary;
     }
 }
 
 /**
- * @ingroup SortingMethods
+ * @ingroup Struct
+ * @brief Перегрузка оператора "больше" (>).
+ * @details Сравнивает двух человек по полям: подразделение, ФИО служащего, зарплата.
+ * @param a Первый сотрудник
+ * @param b Второй сотрудник
+ * @return true, если первый сотрудник больше второго.
+ */
+bool operator>(const Employee& a, const Employee& b) {
+    if (a.department != b.department) {
+        return a.department > b.department;
+    }
+    else if (a.name != b.name) {
+        return a.name > b.name;
+    }
+    else {
+        return a.salary > b.salary;
+    }
+}
+
+/** 
+ * @ingroup Struct
+ * @brief Перегрузка оператора "меньше или равно" (<=). 
+ * @details Сравнивает двух человек по полям: подразделение, ФИО служащего, зарплата.
+ * @param a Первый сотрудник
+ * @param b Второй сотрудник
+ * @return true, если первый сотрудник <= второго.
+ */
+bool operator<=(const Employee& a, const Employee& b) {
+    if (a.department != b.department) {
+        return a.department <= b.department;
+    }
+    else if (a.name != b.name) {
+        return a.name <= b.name;
+    }
+    else {
+        return a.salary <= b.salary;
+    }
+}
+
+/** 
+ * @ingroup Struct
+ * @brief Перегрузка оператора "больше или равно" (>=). 
+ * @details Сравнивает двух человек по полям: подразделение, ФИО служащего, зарплата.
+ * @param a Первый сотрудник
+ * @param b Второй сотрудник
+ * @return true, если первый сотрудник >= второго.
+ */
+bool operator>=(const Employee& a, const Employee& b) {
+    if (a.department != b.department) {
+        return a.department >= b.department;
+    }
+    else if (a.name != b.name) {
+        return a.name >= b.name;
+    }
+    else {
+        return a.salary >= b.salary;
+    }
+}
+
+
+
+
+/**
+ * @ingroup Sorting
+ * @brief Сортировка простыми вставками.
+ * @param arr Ссылка на массив сотрудников.
+ */
+void SimpleSort(std::vector<Employee>& arr) {
+    for (int i = 1; i < arr.size(); i++) {
+        Employee a = arr[i]; 
+        int j = i - 1;
+        
+        while (j >= 0 && arr[j] > a) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = a; 
+    }
+}
+
+/**
+ * @ingroup Sorting
  * @brief Шейкер-сортировка (двунаправленный пузырек).
  * @param arr Ссылка на массив сотрудников.
  */
 void shakerSort(std::vector<Employee>& arr) {
     int left = 0;
     int right = arr.size() - 1;
-    bool swapped = true;
+    bool flag = true;
 
-    while (swapped) {
-        swapped = false;
+    while (flag) {
+        flag = false;
         for (int i = left; i < right; i++) {
             if (arr[i] > arr[i + 1]) {
                 std::swap(arr[i], arr[i + 1]);
-                swapped = true;
+                flag = true;
             }
         }
-        if (!swapped) break; 
-        swapped = false;
+        if (flag == false) break; 
+        flag = false;
         right--; 
 
         for (int i = right; i > left; i--) {
             if (arr[i] < arr[i - 1]) {
                 std::swap(arr[i], arr[i - 1]);
-                swapped = true;
+                flag = true;
             }
         }
         left++; 
@@ -128,51 +168,82 @@ void shakerSort(std::vector<Employee>& arr) {
 }
 
 /**
- * @ingroup SortingMethods
- * @brief Вспомогательная функция для сортировки слиянием. Сливает две части вместе.
+ * @ingroup Sorting
+ * @brief Вспомогательная функция. Сливает две отсортированные части вместе.
  */
-void merge(std::vector<Employee>& arr, int left, int mid, int right) {
-    std::vector<Employee> L(arr.begin() + left, arr.begin() + mid + 1);
-    std::vector<Employee> R(arr.begin() + mid + 1, arr.begin() + right + 1);
+void mergeSort1(std::vector<Employee>& arr, int left, int mid, int right) {
+    std::vector<Employee> L; 
+    std::vector<Employee> R; 
 
-    int i = 0, j = 0, k = left;
+    for (int i = left; i <= mid; i++) {
+        L.push_back(arr[i]);
+    }
+
+    
+    for (int j = mid + 1; j <= right; j++) {
+        R.push_back(arr[j]);
+    }
+
+    
+    int i = 0; 
+    int j = 0; 
+    int k = left; 
+
 
     while (i < L.size() && j < R.size()) {
         if (L[i] <= R[j]) {
-            arr[k++] = L[i++];
+            arr[k] = L[i]; 
+            i++;           
         } else {
-            arr[k++] = R[j++];
+            arr[k] = R[j]; 
+            j++;           
         }
+        k++; 
     }
-    while (i < L.size()) arr[k++] = L[i++];
-    while (j < R.size()) arr[k++] = R[j++];
+
+    
+    while (i < L.size()) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    
+    while (j < R.size()) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
 }
 
 /**
- * @ingroup SortingMethods
+ * @ingroup Sorting
  * @brief Основная рекурсивная функция сортировки слиянием.
- * @param arr Массив сотрудников.
- * @param left Индекс начала.
- * @param right Индекс конца.
  */
-void mergeSort(std::vector<Employee>& arr, int left, int right) {
-    if (left >= right) return; 
+void mergeSort2(std::vector<Employee>& arr, int left, int right) {
+    if (left >= right) {
+        return; 
+    }
+    
     
     int mid = (left + right) / 2; 
-    mergeSort(arr, left, mid);      
-    mergeSort(arr, mid + 1, right); 
-    merge(arr, left, mid, right);   
+    
+    
+    mergeSort2(arr, left, mid);      
+    
+    
+    mergeSort2(arr, mid + 1, right); 
+    
+    
+    mergeSort1(arr, left, mid, right);  
 }
 
 
 
-/**
- * @defgroup HelperFunctions Вспомогательные функции
- * @brief Функции для работы с файловой системой (чтение, запись, генерация CSV).
- */
+
 
 /**
- * @ingroup HelperFunctions
+ * @ingroup HelpFunc
  * @brief Чтение данных из CSV файла.
  * @param filename Имя файла для чтения.
  * @return Массив загруженных сотрудников.
@@ -182,68 +253,99 @@ std::vector<Employee> readCSV(const std::string& filename) {
     std::ifstream file(filename);
     std::string line;
 
+    
     while (std::getline(file, line)) {
-        std::stringstream ss(line);
-        Employee emp;
-        std::getline(ss, emp.fullName, ',');
-        std::getline(ss, emp.position, ',');
-        std::getline(ss, emp.department, ',');
-        std::string sal;
-        std::getline(ss, sal, ',');
-        if (!sal.empty()) emp.salary = std::stoi(sal);
+        
+        
+        std::stringstream lineStream(line); 
+        
+        Employee emp; 
+
+        
+        std::getline(lineStream, emp.name, ',');       
+        
+        
+        std::getline(lineStream, emp.job, ',');        
+        
+        
+        std::getline(lineStream, emp.department, ','); 
+        
+        
+        std::string salaryText;
+        std::getline(lineStream, salaryText, ',');
+        
+        
+        emp.salary = std::stoi(salaryText); 
+
+        
         data.push_back(emp);
     }
-    return data;
+    
+    return data; 
 }
 
 /**
- * @ingroup HelperFunctions
+ * @ingroup HelpFunc
  * @brief Запись отсортированных данных в CSV файл.
  * @param filename Имя файла для сохранения.
  * @param data Массив сотрудников для записи.
  */
 void writeCSV(const std::string& filename, const std::vector<Employee>& data) {
     std::ofstream file(filename);
-    for (const auto& emp : data) {
-        file << emp.fullName << "," << emp.position << ","
-             << emp.department << "," << emp.salary << "\n";
+    for (int i = 0; i < data.size(); i++) {
+        file << data[i].name << "," << data[i].job << ","
+             << data[i].department << "," << data[i].salary << "\n";
     }
 }
 
 /**
- * @ingroup HelperFunctions
+ * @ingroup HelpFunc
  * @brief Генерация CSV файла со случайными данными.
  * @param filename Имя создаваемого файла.
  * @param count Количество строк для генерации.
  */
 void generateCSV(const std::string& filename, int count) {
-    std::vector<std::string> names = {"Ivanov I.I.", "Petrov P.P.", "Sidorov S.S.", "Smirnov A.A.", "Kozlov B.B."};
+    std::vector<std::string> lastNames = {"Ivanov", "Petrov", "Sidorov", "Smirnov", "Kozlov"};
     std::vector<std::string> positions = {"Accountant", "Analyst", "Manager", "Director", "Clerk"};
     std::vector<std::string> depts = {"IT", "HR", "Finance", "Sales", "Marketing"};
 
-    std::mt19937 gen(42); 
-    std::uniform_int_distribution<> dName(0, 4), dPos(0, 4), dDept(0, 4), dSal(30000, 200000);
-
     std::ofstream file(filename);
+    
     for (int i = 0; i < count; i++) {
-        file << names[dName(gen)] << "," << positions[dPos(gen)] << ","
-             << depts[dDept(gen)] << "," << dSal(gen) << "\n";
+        int familia_ind = rand() % 5;
+        int job_ind = rand() % 5;
+        int dept_ind = rand() % 5;
+
+        
+        int salary = 50000 + (rand() % 150001);
+
+
+        char bukva_1 = 'A' + (rand() % 26);
+        char bukva_2 = 'A' + (rand() % 26);
+
+        
+        std::string fullName = lastNames[familia_ind] + " " + bukva_1 + "." + bukva_2 + ".";
+
+        
+        file << fullName << "," << positions[job_ind] << ","
+             << depts[dept_ind] << "," << salary << "\n";
     }
 }
 
 
 
-/**
- * @defgroup MainFunction Главная функция
- * @brief Точка входа в программу и бенчмаркинг алгоритмов.
- */
+
 
 /**
- * @ingroup MainFunction
+ * @ingroup MainFunc
  * @brief Точка входа.
  * @details Запускает генерацию файлов разных размеров, тестирует время выполнения 
  * всех видов сортировок и сохраняет результаты в `results.csv`.
  * @return Код завершения программы (0 при успехе).
+ */
+/**
+ * @ingroup MainFunc
+ * @brief Точка входа.
  */
 int main() {
     std::vector<int> sizes = {100, 500, 1000, 2500, 5000, 10000, 20000, 30000, 50000, 100000};
@@ -251,7 +353,9 @@ int main() {
     std::ofstream results("results.csv");
     results << "Size,Insertion,Shaker,Merge,StdSort\n";
 
-    for (int n : sizes) {
+    for (int i = 0; i < sizes.size(); i++) {
+        int n = sizes[i]; 
+
         std::string filename = "data_" + std::to_string(n) + ".csv";
         generateCSV(filename, n);
         std::vector<Employee> original = readCSV(filename);
@@ -259,39 +363,39 @@ int main() {
         std::vector<Employee> arr;
         double timeIns = 0, timeShaker = 0, timeMerge = 0, timeStd = 0;
 
-        // Вставки
+        // 1
         if (n <= 30000) {
-            arr = original;
-            auto t1 = std::chrono::high_resolution_clock::now();
-            insertionSort(arr);
-            auto t2 = std::chrono::high_resolution_clock::now();
-            timeIns = std::chrono::duration<double, std::milli>(t2 - t1).count();
+            arr = original; 
+            int start = clock(); 
+            SimpleSort(arr); 
+            int end = clock();   
+            timeIns = (double)(end - start) / CLOCKS_PER_SEC * 1000.0; 
         }
 
-        // Шейкер
+        // 2
         if (n <= 30000) {
             arr = original;
-            auto t1 = std::chrono::high_resolution_clock::now();
+            int start = clock();
             shakerSort(arr);
-            auto t2 = std::chrono::high_resolution_clock::now();
-            timeShaker = std::chrono::duration<double, std::milli>(t2 - t1).count();
+            int end = clock();
+            timeShaker = (double)(end - start) / CLOCKS_PER_SEC * 1000.0; 
         }
 
-        // Слияние
+        // 3
         arr = original;
-        auto t1 = std::chrono::high_resolution_clock::now();
-        mergeSort(arr, 0, arr.size() - 1);
-        auto t2 = std::chrono::high_resolution_clock::now();
-        timeMerge = std::chrono::duration<double, std::milli>(t2 - t1).count();
+        int startMerge = clock(); 
+        mergeSort2(arr, 0, arr.size() - 1); 
+        int endMerge = clock();
+        timeMerge = (double)(endMerge - startMerge) / CLOCKS_PER_SEC * 1000.0;
 
-        if (n == 100) writeCSV("sorted_output.csv", arr); // Записываем в файл 
+        if (n == 100) writeCSV("sorted_output.csv", arr);
 
-        // std::sort 
+        // 4
         arr = original;
-        auto t3 = std::chrono::high_resolution_clock::now();
+        int startStd = clock();
         std::sort(arr.begin(), arr.end());
-        auto t4 = std::chrono::high_resolution_clock::now();
-        timeStd = std::chrono::duration<double, std::milli>(t4 - t3).count();
+        int endStd = clock();
+        timeStd = (double)(endStd - startStd) / CLOCKS_PER_SEC * 1000.0;
 
         std::cout << "n=" << n << "  Ins=" << timeIns << "  Shaker=" << timeShaker
                   << "  Merge=" << timeMerge << "  Std=" << timeStd << "\n";
@@ -299,6 +403,6 @@ int main() {
         results << n << "," << timeIns << "," << timeShaker << "," << timeMerge << "," << timeStd << "\n";
     }
 
-    results.close();
-    return 0;
+    results.close(); 
+    return 0; 
 }

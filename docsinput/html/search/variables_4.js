@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['position_0',['position',['../struct_employee.html#aff8eacef4f7f05249658ed06555054db',1,'Employee']]]
+  ['marker_0',['marker',['../namespaceplot.html#a6f4c46ae4e5d361b778c402ec6a4a993',1,'plot']]]
 ];
